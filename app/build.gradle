@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.mfsi.livespecs"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // Provides ArFragment, and other UX resources.
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.7.0"
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+
+
+sceneform.asset('sampledata/Glasses_01.gltf',
+        'default',
+        'sampledata/Glasses_01.sfa',
+        'src/main/assets/Glasses_01')
+
+sceneform.asset('sampledata/football_helmet.obj',
+        'default',
+        'sampledata/football_helmet.sfa',
+        'src/main/assets/football_helmet')
+
+
+
+sceneform.asset('sampledata/glasses.obj',
+        'default',
+        'sampledata/glasses.sfa',
+        'src/main/assets/glasses')

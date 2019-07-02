@@ -1,0 +1,86 @@
+{
+  materials: [
+    {
+      name: '1A1A1A',
+      parameters: [
+        {
+          baseColorFactor: [
+            0.101961,
+            0.101961,
+            0.101961,
+            1,
+          ],
+        },
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint:  [
+          0.64,
+          0.64,
+          0.64,
+          1,
+          ],
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: 1,
+        },
+        {
+          roughnessFactor: 0,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+       
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Glasses_01.gltf',
+    name: 'Glasses_01',
+    recenter: 'root',
+    scale: 0.0045,
+  },
+  version: '0.54:2',
+}
